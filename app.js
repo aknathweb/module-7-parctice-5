@@ -1,9 +1,12 @@
+//select location from html file start
 const imagesArea = document.querySelector('.images');
 const gallery = document.querySelector('.gallery');
 const galleryHeader = document.querySelector('.gallery-header');
 const searchBtn = document.getElementById('search-btn');
 const sliderBtn = document.getElementById('create-slider');
 const sliderContainer = document.getElementById('sliders');
+const slide_dot = document.getElementById('slide_dot');
+//select location from html file end
 
 // selected image  array
 let sliders = [];
@@ -78,10 +81,9 @@ const createSlider = () => {
   document.querySelector('.main').style.display = 'block';
   // hide image aria
   imagesArea.style.display = 'none';
-  //set slide passing time
+  //set slide passing time and default time set 1000 ms using logical or
   const duration = document.getElementById('duration').value * 1000 || 1000;
 
-  const slide_dot = document.getElementById('slide_dot');
   // set new crate slides dot "" for avoid previous creation 
   slide_dot.innerHTML = "";
   //set new counter = 0 
